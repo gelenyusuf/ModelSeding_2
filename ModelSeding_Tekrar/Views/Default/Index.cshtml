@@ -1,0 +1,73 @@
+﻿@model GetCalisan
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+        Yönetici
+        </tr>
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                Ad
+            </td>
+            <td>
+                Soyad
+            </td>
+            <td>
+                Departman
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+     
+       
+        <tr>
+            <td>
+                @Model.Yonetici.ID
+            </td>
+            <td>
+                @Model.Yonetici.Ad
+            </td>
+            <td>
+                @Model.Yonetici.Soyad
+            </td>
+            <td>
+                @Model.Yonetici.Departman
+            </td>
+
+        </tr>
+       </tbody>
+      
+    
+</table>
+<table  class="table table-hover">
+    <thead>
+        <tr>
+            Çalışan
+
+        </tr>
+        <tr>
+            <td> ID</td>
+            <td> Ad</td>
+            <td> Soyad</td>
+            <td> Yas</td>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (Calisan item in Model.Calisanlar)
+        {
+
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Ad</td>
+                <td>@item.Soyad</td>
+                <td>@item.Yas</td>
+            </tr>
+        }
+    </tbody>
+</table>

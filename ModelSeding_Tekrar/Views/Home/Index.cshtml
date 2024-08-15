@@ -1,0 +1,39 @@
+﻿@model List<Calisan>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                   <th>
+                       ID
+                   </th>
+                   <th>
+                       Ad
+                    </th>
+                    <th>
+                      Soyad 
+                   </th>
+                   <th>
+                      Yas
+                   </th>
+                </tr>
+           </thead>
+        <tbody>
+        @foreach (Calisan item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ID
+                </td>
+                <td>
+                    @item.Ad
+                </td>
+                <td>
+                    @item.Soyad
+                </td>
+                <td>
+                    @item.Yas
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
